@@ -5,6 +5,7 @@ import ExperienceSec from "./components/home/experience-sec"
 import HeroSection from "./components/home/hero-section"
 import ContactBar from "./components/home/hero-section/contact-bar"
 import LatestWork from "./components/home/latest-work"
+import ThreeDPortfolio from "./components/home/3d-portfolio"
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
         <ExperienceSec />
         <EducationSkills />
         <LatestWork />
+        <ThreeDPortfolio />
         <Contact />
       </main>
     </>

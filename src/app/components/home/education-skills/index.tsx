@@ -2,8 +2,10 @@
 import { getDataPath, getImgPath } from "@/utils/image";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const EducationSkills = () => {
+  const sectionRef = useScrollAnimation();
   const [educationData, setEductionData] = useState<any>(null);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const EducationSkills = () => {
   }, []);
 
   return (
-    <section>
+    <section ref={sectionRef}>
       <div className="border-t border-softGray overflow-hidden">
         <div className="container relative z-10">
           <Image

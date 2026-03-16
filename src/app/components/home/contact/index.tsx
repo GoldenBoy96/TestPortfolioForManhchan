@@ -3,8 +3,10 @@ import { getDataPath, getImgPath } from "@/utils/image";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Contact = () => {
+  const sectionRef = useScrollAnimation();
   const [contactData, setContactData] = useState<any>(null);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -67,7 +69,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="no-print">
+    <section ref={sectionRef} className="no-print">
       <div className="container">
         <div className="pt-16 md:pt-32 pb-20">
           <div className="flex items-center justify-between gap-2 border-b border-black pb-7 mb-9 md:mb-16">

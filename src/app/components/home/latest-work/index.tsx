@@ -3,8 +3,10 @@ import { getDataPath, getImgPath } from "@/utils/image";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const LatestWork = () => {
+  const sectionRef = useScrollAnimation();
   const [workData, setWorkData] = useState<any>(null);
 
   useEffect(() => {
@@ -23,7 +25,7 @@ const LatestWork = () => {
   }, []);
 
   return (
-    <section>
+    <section ref={sectionRef}>
       <div className="bg-softGray">
         <div className="container">
           <div className="py-16 xl:py-32 ">

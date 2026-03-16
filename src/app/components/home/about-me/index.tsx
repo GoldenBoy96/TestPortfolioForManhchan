@@ -1,9 +1,12 @@
+"use client";
 import { getImgPath } from "@/utils/image";
 import Image from "next/image";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const AboutMe = () => {
+  const sectionRef = useScrollAnimation();
   return (
-    <section>
+    <section ref={sectionRef}>
       <div className="relative bg-softGray py-10 md:py-32">
         <div className="absolute top-0 w-full px-9">
           <Image
